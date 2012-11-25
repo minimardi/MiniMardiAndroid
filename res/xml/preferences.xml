@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory 
+		android:title="Settings"
+		android:key="first_category">
+		
+		<CheckBoxPreference 
+			android:key="engine_on"
+			android:summary="Play against minimardi"
+			android:title="Enable engine" 
+			android:defaultValue="true"
+		/>
+		
+		<ListPreference 
+			android:key="engine_strength"
+			android:title="Level"
+			android:summary="Change engine strength"
+			android:defaultValue="2" 
+			android:entries="@array/engine_level"
+			android:entryValues="@array/engine_level_values"
+			android:dependency="engine_on"
+		/>	
+			
+	</PreferenceCategory>
+	
+</PreferenceScreen>
